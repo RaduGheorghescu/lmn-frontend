@@ -1,0 +1,52 @@
+<div>
+  <div class="container">
+    <h3 class="card-header">News</h3>
+    <button (click)="testSave()"></button>
+    <br>
+    <p>Our laboratory was established in 1983 within the Electrotechnic Faculty
+      of the Polytechnic University of Bucharest, which didactic and research
+      activities. Some of our major milestones:</p>
+    <ul>
+      <li *ngFor="let history of historyList">
+        {{history.start}} to {{history.stop}} <b>{{history.title}}</b> - {{history.description}}
+      </li>
+      <li>1991 - <b>TEMPUS JEP 2717</b> - Post-universitary School
+        of Computer-Aided Electrical Engineering - First hybrid network of Unix
+        graphic workstations; partnerships with top European laboratories: Graz,
+        Atenas, Genova, Grenoble, Darmastadt, Paris, Bath;
+      <li>1993 - the <b>CAEE' 93</b> conference with
+        120 atendees from 20 countries
+      <li>1994 - the <b>LMN webpage</b> - among the first
+        webpages in Romania
+      <li>1995 to 1997 - <b>INCIP and CoLaborator</b> -
+        The first High Performance Computer at the
+        Polytechnic University of Bucharest
+      <li>1996 to 2000 - <b>JSAEM - ENDE</b>
+      <li>1996 - <b>RJSAEM</b> - The first
+        Romanian-Japanese workshop
+      <li>1996 - <b>TEMPUS JEP 9122</b> - Deployment of
+        PCs LAN, extended partnerships
+      <li>1997 to 2000 - <b>INCO - MANODET</b> -
+        Non-destructive defectostophy
+      <li>2001 to 2004 - <b>FP5/IST/Codestar</b> -
+        in partnership with IMEC, Philips, AMS
+      <li>2005-2008 - <b>FP6/IST/Chameleon RF</b> -
+        Extension of the partnership with IST Lisbon
+      <li>2005-2009 - <b>FP6/EST/EST3</b> - Marie Curie
+        Doctoral School
+      <li>2005-2009 - <b>RTN COMSON</b> - Extending of the
+        industrial European partnerships with
+        Philips, Siemens, ST-Micro
+      <li>2006-2010 - <b>ToK 4nEDA</b> - The first HPC system
+        with 112 nodes at LMN/CIEAC, using parallel MATLAB
+        and COMSOL
+      <li>2005-2008 - <b>CEEX nEDA</b> - National partnership
+        with Cluj and Iasi
+      <li>2006 - Organzied the <b>SCEE 06</b> conference
+        in Sinaia
+      <li>2007-2010 - <b>FP6/MNP/ARTIC</b>
+
+    </ul>
+
+  </div>
+</div>

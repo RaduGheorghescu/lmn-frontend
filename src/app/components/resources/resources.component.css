@@ -1,0 +1,13 @@
+.card-img-bottom {
+  color: #fff;
+  height: 15rem;
+
+  background-size: cover;
+}
+.card-text {
+  padding-left: 10px;
+}
+.card-title {
+  padding-left: 10px;
+  padding-top: 5px;
+}

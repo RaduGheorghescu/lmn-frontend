@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" [ngStyle]="navbarStyle()">
+  <a class="navbar-brand" href="#">{{siteComponents["site.title"]}}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+          aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" routerLinkActive="active"
+           [routerLinkActiveOptions]="{ exact: true }">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/history" routerLinkActive="active">{{siteComponents["page.history.title"]}}<span
+          class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/news" routerLinkActive="active">News<span
+          class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/projects" routerLinkActive="active">Projects<span
+          class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/people" routerLinkActive="active">People<span
+          class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/research" routerLinkActive="active">Research<span
+          class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/publications" routerLinkActive="active">Publications<span
+          class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/resources" routerLinkActive="active">Resources<span
+          class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/links" routerLinkActive="active">Links<span
+          class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact<span
+          class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="changeLanguage('ro')" routerLinkActive="active">Change to {{currentLanguage}}<span
+          class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li [hidden]="authenticated()" class="nav-item">
+        <a class="nav-link" routerLink="/login" routerLinkActive="active">Login<span
+          class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" [hidden]="!authenticated()"><a class="nav-link" (click)="logout()">Logout</a></li>
+    </ul>
+  </div>
+</nav>
