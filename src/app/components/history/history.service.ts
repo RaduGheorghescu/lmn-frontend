@@ -10,10 +10,10 @@ export class HistoryService {
     this.httpService = httpService;
   }
   getAll(): Observable<any>{
-    return this.httpService.get("http://localhost:8081/api/history", {withCredentials: true});
+    return this.httpService.get("https://lmndev.herokuapp.com/api/history", {withCredentials: true});
   }
   save(history: History):Observable<any>{
-    return this.httpService.post("http://localhost:8081/api/history", history, {withCredentials: true});
+    return this.httpService.post("https://lmndev.herokuapp.com/api/history", history, {withCredentials: true});
   }
 
 }

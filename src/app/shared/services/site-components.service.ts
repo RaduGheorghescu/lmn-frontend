@@ -6,8 +6,11 @@ export class SiteComponentsService {
   constructor(private http:HttpClient) { }
   siteCompoents = {};
 
+
+
   getSiteComponents(){
-    this.http.get("http://localhost:8081/api/siteComponents/all", {withCredentials:true}).subscribe(data =>{
+    this.http.get("http://localhost:8081/api/siteComponents/all", {withCredentials:true}).subscribe(response =>{
+      let data:any = response;
       for(let i=0; i<data.length; i++) {
         this.siteCompoents[data[i].component] = data[i].content;
       }

@@ -13,8 +13,8 @@ import {SiteComponentsService} from "../services/site-components.service";
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  private currentLanguage: String;
-  private siteComponents;
+  currentLanguage: String;
+  siteComponents;
 
   constructor(private navbarService: NavbarHttpServiceService, private router: Router, private appService: AppService, private http: HttpClient, private backService:BackStatusService, private siteComponentsService:SiteComponentsService) {
     this.siteComponents = siteComponentsService.siteCompoents;
@@ -55,7 +55,7 @@ export class NavbarComponent implements OnInit {
   }
 
   logout() {
-    this.http.post('http://localhost:8081/logout', {}, {withCredentials: true}).finally(() => {
+    this.http.post('https://lmndev.herokuapp.com/logout', {}, {withCredentials: true}).finally(() => {
       this.appService.authenticated = false;
       this.router.navigateByUrl('/login');
     }).subscribe();

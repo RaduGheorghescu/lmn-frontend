@@ -9,12 +9,12 @@ export class AppService{
   constructor(private http: HttpClient) {
   }
   getCurrentUser(){
-    this.http.get('http://localhost:8081/api/user/me', {withCredentials: true}).subscribe(response => {
+    this.http.get('https://lmndev.herokuapp.com/api/user/me', {withCredentials: true}).subscribe(response => {
       return(response);
     });
   }
   isAuthenticate(){
-    this.http.get('http://localhost:8081/api/user/me', {withCredentials: true} ).subscribe(response => {
+    this.http.get('https://lmndev.herokuapp.com/api/user/me', {withCredentials: true} ).subscribe(response => {
       if(response != null) {
         if (response['name']) {
           this.authenticated = true;
@@ -31,7 +31,7 @@ export class AppService{
       authorization: 'Basic ' + btoa(credentials.username + ':' + credentials.password)
     } : {});
 
-    this.http.get('http://localhost:8081/api/user/me', {headers: headers, withCredentials: true} ).subscribe(response => {
+    this.http.get('https://lmndev.herokuapp.com/api/user/me', {headers: headers, withCredentials: true} ).subscribe(response => {
 
       if(response != null) {
         if (response['name']) {
